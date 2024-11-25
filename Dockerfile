@@ -1,5 +1,5 @@
 # Use the official Golang image
-FROM golang:1.16
+FROM golang:1.23
 
 # Set the working directory
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Set the working directory to /app/api
-WORKDIR /app/api
+# WORKDIR /app/api
 
 # Build the application
 RUN go build -o main .
